@@ -290,31 +290,109 @@
         document.addEventListener('DOMContentLoaded', function() {
             loadAlerts();
         });
-
-        function loadAlerts() {
-            const alerts = [
-                {
-                    type: "Phishing",
-                    keywords: "urgent password reset",
-                    url: "http://bank-login.xyz",
-                    location: "Mumbai",
-                    is_fraud: true,
-                    confidence_score: 95.0
-                },
-                {
-                    type: "General Inquiry", 
-                    keywords: "checking my account balance",
-                    url: "",
-                    location: "Delhi",
-                    is_fraud: false,
-                    confidence_score: 5.0
-                }
-            ];
-
-            renderAlerts(alerts);
-            displayAccuracyMeter(90.1);
+function loadAlerts() {
+    const alerts = [
+        {
+            type: "Phishing",
+            keywords: "urgent password reset",
+            url: "http://bank-login.xyz",
+            location: "Mumbai",
+            is_fraud: true,
+            confidence_score: 95.0
+        },
+        {
+            type: "General Inquiry", 
+            keywords: "checking my account balance",
+            url: "",
+            location: "Delhi",
+            is_fraud: false,
+            confidence_score: 5.0
+        },
+        {
+            type: "Investment Scam",
+            keywords: "guaranteed returns, crypto investment",
+            url: "http://crypto-invest-now.com",
+            location: "Bangalore",
+            is_fraud: true,
+            confidence_score: 92.0
+        },
+        {
+            type: "Job Scam",
+            keywords: "work from home, high salary",
+            url: "http://easy-job-offers.net",
+            location: "Chennai",
+            is_fraud: true,
+            confidence_score: 87.0
+        },
+        {
+            type: "Tech Support Scam",
+            keywords: "virus detected, remote access",
+            url: "http://microsoft-support.xyz",
+            location: "Hyderabad",
+            is_fraud: true,
+            confidence_score: 88.0
+        },
+        {
+            type: "Lottery Scam",
+            keywords: "you've won, claim your prize",
+            url: "http://global-lottery-winners.com",
+            location: "Kolkata",
+            is_fraud: true,
+            confidence_score: 90.0
+        },
+        {
+            type: "Romance Scam",
+            keywords: "emergency money, travel expenses",
+            url: "",
+            location: "Pune",
+            is_fraud: true,
+            confidence_score: 85.0
+        },
+        {
+            type: "Account Verification",
+            keywords: "verify your account, suspicious activity",
+            url: "http://secure-account-verify.net",
+            location: "Ahmedabad",
+            is_fraud: true,
+            confidence_score: 83.0
+        },
+        {
+            type: "Tax Refund Scam",
+            keywords: "unclaimed refund, processing fee",
+            url: "http://tax-refund-claim.gov.xyz",
+            location: "Jaipur",
+            is_fraud: true,
+            confidence_score: 86.0
+        },
+        {
+            type: "Safe Inquiry",
+            keywords: "product features, pricing information",
+            url: "",
+            location: "Lucknow",
+            is_fraud: false,
+            confidence_score: 8.0
+        },
+        {
+            type: "Social Media Scam",
+            keywords: "celebrity endorsement, limited offer",
+            url: "http://instagram-promo-offer.com",
+            location: "Surat",
+            is_fraud: true,
+            confidence_score: 84.0
+        },
+        {
+            type: "Banking Alert",
+            keywords: "transaction notification, account update",
+            url: "",
+            location: "Patna",
+            is_fraud: false,
+            confidence_score: 12.0
         }
+    ];
 
+    renderAlerts(alerts);
+    displayAccuracyMeter(90.1);
+}
         function renderAlerts(alerts) {
             const container = document.getElementById('alerts-container');
             container.innerHTML = '';
@@ -363,6 +441,7 @@
     </script>
 </body>
 </html>
+
 
 
 
